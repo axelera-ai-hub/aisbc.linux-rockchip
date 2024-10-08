@@ -635,7 +635,6 @@
 		interrupts = <GIC_SPI 45 IRQ_TYPE_LEVEL_HIGH>;
 		clocks =  <&cru ACLK_VIO>, <&cru PCLK_HDMI>;
 		clock-names = "aclk", "pclk";
-		rockchip,grf = <&grf>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&hdmi_ctl>;
 		#address-cells = <1>;
