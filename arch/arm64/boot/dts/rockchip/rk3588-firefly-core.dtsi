@@ -5,7 +5,11 @@
  */
 
 #include "dt-bindings/usb/pd.h"
+#if defined(RK3588J_VERSION)
 #include "rk3588.dtsi"
+#else
+#include "rk3588j.dtsi"
+#endif
 #include "rk3588-firefly-rk806-single.dtsi"
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/pwm/pwm.h>

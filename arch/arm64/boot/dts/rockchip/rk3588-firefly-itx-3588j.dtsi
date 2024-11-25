@@ -4,11 +4,12 @@
  *
  */
 
- #define rk3588
- #include "rk3588-firefly-port.dtsi"
- #include "rk3588-diff.dtsi"
+#define rk3588
+#define RK3588J_VERSION
+#include "rk3588-firefly-port.dtsi"
+#include "rk3588-diff.dtsi"
 
- / {
+/ {
 	//ver v1.1 support
 	fan: pwm-fan {
 		compatible = "pwm-fan";
