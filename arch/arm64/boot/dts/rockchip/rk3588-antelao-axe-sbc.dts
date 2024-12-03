@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (c) 2024 Axelera AI
+ *
+ */
+
+/dts-v1/;
+
+#include "rk3588-antelao-axe-sbc.dtsi"
+#include "rk3588-android.dtsi"
+
+/ {
+	model = "ANTELAO IPC AXE-SBC-RK3588 Board";
+	compatible = "rockchip,rk3588-ipc-axe-sbc", "rockchip,rk3588";
+
+	chosen: chosen {
+		bootargs = "earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 irqchip.gicv3_pseudo_nmi=0 root=PARTUUID=614e0000-0000 rw rootwait rcupdate.rcu_expedited=1 rcu_nocbs=all";
+	};
+};
