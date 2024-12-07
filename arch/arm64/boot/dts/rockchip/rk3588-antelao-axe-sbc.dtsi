@@ -39,8 +39,8 @@
 		rockchip,audio-routing =
 			"Headphone", "HPOL",
 			"Headphone", "HPOR",
-			"Speaker", "LOUT2",
-			"Speaker", "ROUT2",
+			"Speaker", "LOUTL",
+			"Speaker", "LOUTR",
 			"Headphone", "Headphone Power",
 			"Speaker", "Speaker Power",
 			"IN2P", "Headset Mic",
