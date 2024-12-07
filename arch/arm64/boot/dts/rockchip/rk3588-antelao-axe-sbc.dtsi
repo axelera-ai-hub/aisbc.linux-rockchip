@@ -283,6 +283,8 @@
 
 &hdmi0 {
 	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&hdmim0_tx0_cec &hdmim0_tx0_hpd_sbc &hdmim0_tx0_scl &hdmim0_tx0_sda>;
 };
 
 &hdmi0_in_vp0 {
@@ -551,6 +553,12 @@
 	sdmmc {
 		sd_s0_pwr: sd-s0-pwr {
 			rockchip,pins = <0 RK_PC5 RK_FUNC_GPIO &pcfg_pull_up>;
+		};
+	};
+
+	hdmi {
+		hdmim0_tx0_hpd_sbc: hdmim0-tx0-hpd-sbc {
+			rockchip,pins = <3 RK_PD4 3 &pcfg_pull_none>;
 		};
 	};
 
