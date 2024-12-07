@@ -34,13 +34,18 @@
 		rockchip,mclk-fs = <256>;
 		rockchip,cpu = <&i2s0_8ch>;
 		rockchip,codec = <&rt5651>;
+		keyup-threshold-microvolt = <1800000>;
+		poll-interval = <100>;
 		rockchip,audio-routing =
 			"Headphone", "HPOL",
 			"Headphone", "HPOR",
 			"Speaker", "LOUT2",
 			"Speaker", "ROUT2",
 			"Headphone", "Headphone Power",
-			"Speaker", "Speaker Power";
+			"Speaker", "Speaker Power",
+			"IN2P", "Headset Mic",
+			"IN2N", "Headset Mic",
+			"Headset Mic", "micbias1";
 	};
 
 	pcie20_avdd0v85: pcie20-avdd0v85 {
