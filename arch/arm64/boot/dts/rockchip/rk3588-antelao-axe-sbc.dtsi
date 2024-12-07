@@ -110,19 +110,6 @@
 		pinctrl-0 = <&typec5v_pwren>;
 	};
 
-	vcc3v3_pcie30: vcc3v3-pcie30 {
-		compatible = "regulator-fixed";
-		regulator-name = "vcc3v3_pcie30";
-		regulator-min-microvolt = <3300000>;
-		regulator-max-microvolt = <3300000>;
-		enable-active-high;
-		/* Add mux */
-		gpio = <&gpio3 RK_PD5 GPIO_ACTIVE_HIGH>; /* PCIE30_PWREN_H */
-		regulator-always-on;
-		startup-delay-us = <50000>;
-		vin-supply = <&vcc12v_dcin>;
-	};
-
 	vcc5v0_host: vcc5v0-host {
 		compatible = "regulator-fixed";
 		regulator-name = "vcc5v0_host";
@@ -150,11 +137,26 @@
 		vin-supply = <&vccio_sd_s0>;
 	};
 
+	vcc3v3_pcie30: vcc3v3-pcie30 {
+		compatible = "regulator-fixed";
+		regulator-name = "vcc3v3_pcie30";
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+		enable-active-high;
+		/* Add mux */
+		gpio = <&gpio3 RK_PD5 GPIO_ACTIVE_HIGH>; /* PCIE30_PWREN_H */
+		regulator-always-on;
+		startup-delay-us = <50000>;
+		vin-supply = <&vcc12v_dcin>;
+	};
+
 	vcc3v3_pcie20: vcc3v3-pcie20 {
 		compatible = "regulator-fixed";
 		regulator-name = "vcc3v3_pcie20";
 		pinctrl-0 = <&pcie20_pwr>;
 		pinctrl-names = "default";
+		regulator-boot-on;
+		regulator-always-on;
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
 		enable-active-high;
@@ -530,7 +532,7 @@
 
 &pcie2x1l1 {
 	reset-gpios = <&gpio4 RK_PA2 GPIO_ACTIVE_HIGH>;
-	vpcie3v3-supply = <&vcc3v3_pcie30>;
+	vpcie3v3-supply = <&vcc3v3_pcie20>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&pcie_reset &m2e_wake_irq &pcie20_clkreqn_m1>;
 	status = "okay";
