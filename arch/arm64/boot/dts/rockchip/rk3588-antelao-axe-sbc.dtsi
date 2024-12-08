@@ -164,7 +164,7 @@
 		vin-supply = <&vcc_3v3_s3>;
 	};
 
-	vcc3v2_hubreset: vcc3v3-hubreset {
+	vcc3v3_hubreset: vcc3v3-hubreset {
 		compatible = "regulator-fixed";
 		regulator-name = "vcc3v3_hubreset";
 		enable-active-high;
