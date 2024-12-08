@@ -584,6 +584,10 @@
 	status = "okay";
 };
 
+&spdif_tx2 {
+	status = "okay";
+};
+
 &vccio_sd_s0 {
 	regulator-min-microvolt = <3300000>;
 	regulator-max-microvolt = <3300000>;
