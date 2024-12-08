@@ -201,16 +201,6 @@
 	status = "okay";
 };
 
-&dp1 {
-	pinctrl-names = "default";
-	pinctrl-0 = <&dp1m0_pins>;
-	status = "okay";
-};
-
-&dp1_in_vp2 {
-	status = "okay";
-};
-
 &gmac0 {
 	/* Use rgmii-rxid mode to disable rx delay inside Soc */
 	phy-mode = "rgmii-rxid";
