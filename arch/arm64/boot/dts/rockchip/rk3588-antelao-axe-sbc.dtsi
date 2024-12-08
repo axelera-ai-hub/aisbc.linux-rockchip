@@ -211,30 +211,6 @@
 	status = "okay";
 };
 
-&dsi0 {
-	status = "disabled";
-};
-
-&dsi0_in_vp2 {
-	status = "disabled";
-};
-
-&dsi0_in_vp3 {
-	status = "disabled";
-};
-
-&dsi1 {
-	status = "disabled";
-};
-
-&dsi1_in_vp2 {
-	status = "disabled";
-};
-
-&dsi1_in_vp3 {
-	status = "disabled";
-};
-
 &gmac0 {
 	/* Use rgmii-rxid mode to disable rx delay inside Soc */
 	phy-mode = "rgmii-rxid";
@@ -297,28 +273,8 @@
 	status = "okay";
 };
 
-&hdmi1 {
-	status = "disabled";
-};
-
-&hdmi1_in_vp1 {
-	status = "disabled";
-};
-
-&hdmi1_sound {
-	status = "disabled";
-};
-
-&hdmirx_ctrler {
-	status = "disabled";
-};
-
 &hdptxphy_hdmi0 {
 	status = "okay";
-};
-
-&hdptxphy_hdmi1 {
-	status = "disabled";
 };
 
 &i2c0 {
@@ -382,10 +338,6 @@
 			regulator-off-in-suspend;
 		};
 	};
-};
-
-&i2c4 {
-	status = "disabled";
 };
 
 &i2c5 {
@@ -492,10 +444,6 @@
 	status = "okay";
 };
 
-&i2s6_8ch {
-	status = "disabled";
-};
-
 &i2s7_8ch {
 	status = "disabled";
 };
@@ -519,10 +467,6 @@
 };
 
 &mipi_dcphy1 {
-	status = "disabled";
-};
-
-&pcie2x1l0 {
 	status = "disabled";
 };
 
@@ -616,14 +560,6 @@
 	};
 };
 
-&pwm1 {
-	status = "disabled";
-};
-
-&pwm3 {
-	status = "disabled";
-};
-
 &route_dsi0 {
 	status = "okay";
 	connect = <&vp3_out_dsi0>;
@@ -636,10 +572,6 @@
 
 &route_hdmi0 {
 	status = "okay";
-};
-
-&route_hdmi1 {
-	status = "disabled";
 };
 
 &sata0 {
@@ -705,13 +637,11 @@
 
 &usbdp_phy1 {
 	rockchip,dp-lane-mux = <2 3>;
-	status = "okay";
 };
 
 &usbdrd_dwc3_0 {
 	dr_mode = "otg";
 	usb-role-switch;
-	status = "okay";
 	port {
 		#address-cells = <1>;
 		#size-cells = <0>;
@@ -728,16 +658,4 @@
 
 &usbhost_dwc3_0 {
 	status = "disabled";
-};
-
-&usbdp_phy0_dp {
-	status = "okay";
-};
-
-&usbdp_phy0_u3 {
-	status = "okay";
-};
-
-&spdif_tx2 {
-	status = "okay";
 };
