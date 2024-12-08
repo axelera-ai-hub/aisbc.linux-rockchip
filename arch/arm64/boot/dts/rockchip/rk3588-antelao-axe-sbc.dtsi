@@ -488,6 +488,18 @@
 	status = "okay";
 };
 
+&sdmmc {
+	supports-emmc;
+	status = "okay";
+	vmmc-supply = <&vcc_3v3_sd_s0>;
+};
+
+&uart5 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart5m1_xfer>;
+};
+
 &pinctrl {
 	sdmmc {
 		sd_s0_pwr: sd-s0-pwr {
@@ -570,17 +582,6 @@
 
 &sata1 {
 	status = "okay";
-};
-
-&sdmmc {
-	status = "okay";
-	vmmc-supply = <&vcc_3v3_sd_s0>;
-};
-
-&uart5 {
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&uart5m1_xfer>;
 };
 
 &vccio_sd_s0 {
