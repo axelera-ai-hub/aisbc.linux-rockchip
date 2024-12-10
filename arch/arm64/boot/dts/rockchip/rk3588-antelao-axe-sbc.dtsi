@@ -467,6 +467,7 @@
 &pcie2x1l1 {
 	reset-gpios = <&gpio4 RK_PA2 GPIO_ACTIVE_HIGH>;
 	vpcie3v3-supply = <&vcc3v3_pcie20>;
+	rockchip,perst-inactive-ms = <1000>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&pcie_reset &m2e_wake_irq &pcie20_clkreqn_m1>;
 	status = "okay";
@@ -478,7 +479,7 @@
 	reset-gpios = <&gpio4 RK_PB6 GPIO_ACTIVE_HIGH>;
 	vpcie3v3-supply = <&vcc3v3_pcie30>;
 	rockchip,perst-inactive-ms = <1000>;
-	rockchip,skip-scan-in-resume;
+	rockchip,wait-for-link-ms = <8000>;
 
 	/* Add Axelera specific mapping */
 	ranges = <0x81000000 0x0 0xf0100000 0x0 0xf0100000 0x0 0x100000
